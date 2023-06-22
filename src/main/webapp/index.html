@@ -5,6 +5,53 @@
     <title>Title</title>
 </head>
 <body>
+    <!--
+        1) 새로 워크스페이스 만들어서 이클립스로 열기
+
+        2) 워크스페이스 셋팅하기(워크스페이스 : 작업환경)
+            2_1) 웹 애플리케이션 셋팅을 java ee환경으로 설정
+
+            2_2) 보여질 UI탭들을 셋팅하기[Windows] - [Show Views]
+                5개 탭 셋팅하기
+            2_3) 인코딩 설정 및 서버 Runtime Environments 셋팅 [Windows - Preferences]
+                2_3_1) 인코딩 설정 : 영어, 숫자, 한글등 모든 문자셋을 사용할 수 있는 UTF-8
+
+                2_3_2) 서버 Runtime잡기 : 이클립스에서 서버를 실행할 수 있도록 연동하는 과정
+                    (Server - Runtime Environments)
+                    - Add 클릭 - 설치한 아파치톰캣과 동일한 버전 선택 - next
+                    - Name값 수정가능(안하면 기본값) - Browse클릭 - 설치한 아파치 톰캣 폴더 선택
+        3) 서버 생성하기
+            3_1) [New] = [Server]
+
+            3_2) 창에 기본적으로 2_3_2번에서 셋팅한 Runtime이 잡혀있을 것
+
+            3_3) finish
+
+            3_4) 생성된 서버 수정하기(만들어진 서버 더블 클릭)
+                3_4_1) 포트번호 재설정 -> 8080 -> 8081로(8080은 오라클 서버의 기본 포트)
+                3_4_2) 왼쪽 하단 Server Options에 Server moudles without publishing 체크
+
+        4) Dynamix web Project만들기 (동적 웹 어플리케이션)
+            4_1) 프로젝트명 작성
+            4_2) 기본배포경로 재설정 : WebContent\WEB-INF\classes
+                => output folder로 지정된 classes폴더는 컴파일된 클래스 파일들이 들어가는 폴더이다.
+                    실제로 프로젝트 배포시 WebContent폴더가 배포된다. (즉, 이안에 실행가능한 모든 파일이 들어가 있어야 한다.)
+            4_3) Context root : 이 애플리케이션만의 고유한 이름으로 지어주기(기본값은 프로젝트명)
+
+            Generate web.xml deployment descriptor 무조건 체크할것(기본적으로 체크 안되어 있음)
+            => web.xml 문서에 기본적인 애플리케이션에 대한 전체 설정정보를 저장함.(서버 실행과 동시에 메인페이지를 지정해줌)
+            4_4) Finish
+
+        5) 만들어진 Project확인
+            내부에 classes폴더가 정상적으로 있는지
+            내부에 web.xml이 정상적으로 있는지
+            index.html파일을 WebContent바로 아래에 만들기
+
+        6) 생성해놓은 서버에 애플리케이션 올리기
+        => 서버 우클릭 - Add And Remove - 올리고자하는 앱 선택후 오른쪽으로 옮기고 - finish
+
+        7) 서버 Start후 웹 애플리케이션 요청 및 index.html 잘 열리는지 확인
+    -->
     <h2>* Servlet</h2>
 
     <p>
